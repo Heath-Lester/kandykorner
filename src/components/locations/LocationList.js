@@ -2,7 +2,7 @@
 import React, { useContext, useEffect } from "react"
 import { LocationContext } from "./LocationsProvider"
 import { Location } from "./Locations"
-
+import "./Locations.css"
 
 export const LocationList = () => {
 
