@@ -1,22 +1,23 @@
 
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { ProductContext } from "./ProductProvider"
 import { Products } from "./Products"
 import "./Products.css"
 
-export const ProductList = props => {
-
+export const ProductList = () => {
+    // debugger
     const { products, getProducts } = useContext(ProductContext)
 
     useEffect(() => {
         console.log("Product list pinged.")
         getProducts()
+        console.log("Products", products)
     }, [])
 
     return (
         <div className="products">
             {
-                products.map(poduct => <Products key={products.id} product={product} />)
+                products.map(product => <Products key={product.id} product={product} />)
             }
         </div>
     )

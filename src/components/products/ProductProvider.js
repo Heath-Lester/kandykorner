@@ -1,3 +1,4 @@
+
 import React, { useState } from "react"
 
 
@@ -16,7 +17,7 @@ export const ProductProvider = props => {
 
     return (
         <ProductContext.Provider value={{
-            getProducts
+            products, getProducts
         }}>
             {props.children}
         </ProductContext.Provider>
