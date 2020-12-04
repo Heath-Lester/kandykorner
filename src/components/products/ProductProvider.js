@@ -15,6 +15,7 @@ export const ProductProvider = props => {
             .then(setProducts)
     }
 
+    
     return (
         <ProductContext.Provider value={{
             products, getProducts
